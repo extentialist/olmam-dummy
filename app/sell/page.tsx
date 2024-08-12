@@ -3,10 +3,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SelectCategory } from "../components/SelectCategory";
 import { Textarea } from "@/components/ui/textarea";
+import { Editor } from "@tiptap/react";
+import { TipTapEditor } from "../components/Editor";
 
 export default function SellRoute(){
     return (
-        <section className="max-w-7xl mx-auto px-4 md:px-8">
+        <section className="max-w-7xl mx-auto px-4 md:px-8 mb-16">
             <Card>
                 <form>
                     <CardHeader>
@@ -26,6 +28,10 @@ export default function SellRoute(){
                         <div className="flex flex-col gap-y-2">
                             <Label>Small Summary</Label>
                            <Textarea placeholder="Please describe your product briefly right here..."/>
+                        </div>
+                        <div className="flex flex-col gap-y-2">
+                            <Label>Description</Label>
+                             <TipTapEditor/>
                         </div>
                     </CardContent>
                 </form>
